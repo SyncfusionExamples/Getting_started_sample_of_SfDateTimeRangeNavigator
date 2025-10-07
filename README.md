@@ -26,8 +26,7 @@ The date-time range navigator control helps users to visualize large data in a s
 The date-time range navigator control provides tooltip support to sliders. Sliders are used to select a particular region of data in the control. Tooltips for sliders show the selected start and end date-time values. You can view the exact date values with the milliseconds precision.
 
 ### Output
-
-[add image]
+<img width="1043" height="248" alt="Range navigator sample output." src="https://github.com/user-attachments/assets/ef17d5ad-ef8b-4e85-98f7-3929a6577d11" />
 
 ## Troubleshooting
 
