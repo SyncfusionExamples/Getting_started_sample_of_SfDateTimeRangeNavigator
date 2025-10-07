@@ -13,48 +13,27 @@
             <local:ViewModel />
         </Grid.DataContext>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="7*"></RowDefinition>
-            <RowDefinition Height="3*"></RowDefinition>
-        </Grid.RowDefinitions>
+        <syncfusion:SfDateTimeRangeNavigator x:Name="RangeNavigator"
+                                             Background="AliceBlue"  
+                                             ItemsSource="{Binding DataSource}" 
+                                             XBindingPath="Date">
 
-        <syncfusion:SfChart Grid.Row="0">
+            <syncfusion:SfDateTimeRangeNavigator.Content>
+                <syncfusion:SfChart >
+                    <syncfusion:SfChart.PrimaryAxis>
+                        <syncfusion:DateTimeAxis Visibility="Collapsed" />
+                    </syncfusion:SfChart.PrimaryAxis>
 
-            <syncfusion:SfChart.PrimaryAxis>
-                <syncfusion:DateTimeAxis />
-            </syncfusion:SfChart.PrimaryAxis>
-
-            <syncfusion:SfChart.SecondaryAxis>
-                <syncfusion:NumericalAxis />
-            </syncfusion:SfChart.SecondaryAxis>
-
-            <syncfusion:LineSeries ItemsSource="{Binding DataSource}"  
-                                   XBindingPath="Date"  
-                                   YBindingPath="Metric">
-            </syncfusion:LineSeries>
-        </syncfusion:SfChart>
-
-        <Grid Grid.Row="2">
-            <syncfusion:SfDateTimeRangeNavigator x:Name="RangeNavigator"
-                                                 Background="AliceBlue"  
-                                                 ItemsSource="{Binding DataSource}" 
-                                                 XBindingPath="Date">
-                
-                <syncfusion:SfDateTimeRangeNavigator.Content>
-                    <syncfusion:SfChart >
-                        <syncfusion:SfChart.PrimaryAxis>
-                            <syncfusion:DateTimeAxis Visibility="Collapsed" />
-                        </syncfusion:SfChart.PrimaryAxis>
-
-                        <syncfusion:SfChart.SecondaryAxis>
-                            <syncfusion:NumericalAxis Visibility="Collapsed" />
-                        </syncfusion:SfChart.SecondaryAxis>
-                        <syncfusion:LineSeries ItemsSource="{Binding DataSource}" 
-                                               XBindingPath="Date" 
-                                               YBindingPath="Metric" />
-                    </syncfusion:SfChart>
-                </syncfusion:SfDateTimeRangeNavigator.Content>
-            </syncfusion:SfDateTimeRangeNavigator>
-        </Grid>
+                    <syncfusion:SfChart.SecondaryAxis>
+                        <syncfusion:NumericalAxis Visibility="Collapsed" />
+                    </syncfusion:SfChart.SecondaryAxis>
+                    
+                    <syncfusion:LineSeries ItemsSource="{Binding DataSource}" 
+                                           XBindingPath="Date" 
+                                           YBindingPath="Metric" />
+                </syncfusion:SfChart>
+            </syncfusion:SfDateTimeRangeNavigator.Content>
+        </syncfusion:SfDateTimeRangeNavigator>
+        
     </Grid>
 </Window>

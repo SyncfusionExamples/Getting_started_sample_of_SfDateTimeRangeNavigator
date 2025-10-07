@@ -10,7 +10,7 @@ namespace DateTimeRangeNavigator
         public ViewModel() 
         {
             randomNumber = new Random();
-            DataSource = GenerateData(100);
+            DataSource = GenerateData(182);
         }
 
         public ObservableCollection<DataModel> GenerateData(int dataCount)
